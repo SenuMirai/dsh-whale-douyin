@@ -165,4 +165,4 @@ pnpm run test:native
 - 其余浏览、采样、看板等能力沿用上游
 
 原项目：<https://github.com/LockyBee/dsh-douyin-agent> （MIT，原作者 LockyBee and contributors）
-本仓库保留上游的 \`LICENSE\` 与 \`THIRD_PARTY_NOTICES.md\` 原文，未做修改。
+本仓库保留上游的 `LICENSE` 与 `THIRD_PARTY_NOTICES.md` 原文，未做修改。
