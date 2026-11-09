@@ -32,7 +32,7 @@ test('评论默认关闭且模型不能改许可；次数只接受有限整数',
 });
 test('公开评论只接受短纯文字，拒绝@、URL、号码、Key、私聊信息和现实承诺', () => {
   assert.equal(validateCommentText('  光影看着很舒服。  '), '光影看着很舒服。'); assert.equal(validateCommentText('鱼'.repeat(200)).length, 200);
-  for (const text of ['', '鱼'.repeat(201), '第一行\n第二行', '隐\u200b藏', '@朋友', '＠朋友', 'https://example.com/a', '看example.com', '电话13800138000', 'sk-abcdefghijklmnopqrstuvwxyz', 'API Key是abc', 'QQ12345', '微信聊', '好友也喜欢', '我保证帮你', '我会联系你', '我亲自去过这里']) assert.throws(() => validateCommentText(text), undefined, text);
+  for (const text of ['', '鱼'.repeat(201), '第一行\n第二行', '隐\u200b藏', '@朋友', '＠朋友', 'https://example.com/a', '看example.com', '电话13800138000', 'sk-test-placeholder-000000000000', 'API Key是abc', 'QQ12345', '微信聊', '好友也喜欢', '我保证帮你', '我会联系你', '我亲自去过这里']) assert.throws(() => validateCommentText(text), undefined, text);
 });
 test('没有同源当前自主观看与有限轮次，或已请求停止时不能评论', async t => {
   const f = fixture(t); f.service.configure({ enabled: true }, { explicit: true }); const input = f.evidence();

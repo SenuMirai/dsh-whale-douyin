@@ -32,7 +32,7 @@ export function CommentsPanel({ state, connected, api, run, busy }) {
     catch (error) { resolving.current.delete(operationId); throw error; }
   }
   return <section className="panel" aria-label="自主评论设置"><div className="panel-title"><h2>自主公开评论</h2><Tag>{state?.paused ? '待人工核对' : state?.enabled ? '已许可' : '未启用'}</Tag></div>
-    <div className="switch-row"><span>允许大肥鱼自主发布评论</span><Switch label="允许自主发布评论" checked={save.draft.enabled} disabled={!ready} onChange={value => save.edit({ enabled: value }, { immediate: true })} /></div>
+    <div className="switch-row"><span>允许助手自主发布评论</span><Switch label="允许自主发布评论" checked={save.draft.enabled} disabled={!ready} onChange={value => save.edit({ enabled: value }, { immediate: true })} /></div>
     <label className="field"><span>评论每日尝试上限</span><Input aria-label="评论每日尝试上限" type="number" min={1} max={20} required value={save.draft.daily} disabled={!ready} onChange={event => save.edit({ daily: event.target.value })} /></label>
     <label className="field"><span>评论每轮尝试上限</span><Input aria-label="评论每轮尝试上限" type="number" min={1} max={3} required value={save.draft.session} disabled={!ready} onChange={event => save.edit({ session: event.target.value })} /></label>
     <AutoSaveStatus status={save.status} />

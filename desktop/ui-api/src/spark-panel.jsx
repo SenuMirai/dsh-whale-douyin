@@ -73,7 +73,7 @@ export function SparkPanel({ state, api, run, busy, configured = false, connecte
   }
   const badge = !ready ? '状态未核实' : state?.busy ? '正在处理' : state?.starting ? '正在启动' : active ? '调度中' : state?.enabled ? '已许可·未运行' : '未许可';
   return <section className="panel" aria-labelledby="spark-title"><div className="panel-title"><h2 id="spark-title">自动续火花</h2><Tag>{badge}</Tag></div>
-    <p className="muted">按大肥鱼的人格生成简短问候，只发给现有许可好友。每位好友每天最多尝试一次；当天已有可靠的发出互动就跳过。</p>
+    <p className="muted">按助手的人格生成简短问候，只发给现有许可好友。每位好友每天最多尝试一次；当天已有可靠的发出互动就跳过。</p>
     <form onSubmit={event => { void save(event); }}>
       <div className="switch-row"><span>允许主动问候</span><Switch label="允许自动续火花" checked={enabled} disabled={editingDisabled} onChange={value => edit(() => setEnabled(value))} /></div>
       <label className="field"><span>每日问候时段 · 北京时间</span><textarea aria-label="每日问候时段" rows={2} value={windows} maxLength={220} required disabled={editingDisabled} onChange={event => edit(() => setWindows(event.target.value))} placeholder="09:00-22:00，每行一段" /></label>

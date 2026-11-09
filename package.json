@@ -2,16 +2,16 @@
   "name": "dsh-douyin-browser-local",
   "version": "1.4.6",
   "type": "module",
-  "description": "DSH 抖音工具：在本机 Edge 里刷抖音电脑版，去掉自带 AI 与人格，看过的内容写进 dsh-whale-world 的记忆中枢",
+  "description": "DSH 原生抖音工具与独立 DeepSeek 本地助手",
   "license": "MIT",
   "author": "LockyBee",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SenuMirai/dsh-whale-douyin.git"
+    "url": "git+https://github.com/LockyBee/dsh-douyin-agent.git"
   },
-  "homepage": "https://github.com/SenuMirai/dsh-whale-douyin#readme",
+  "homepage": "https://github.com/LockyBee/dsh-douyin-agent#readme",
   "bugs": {
-    "url": "https://github.com/SenuMirai/dsh-whale-douyin/issues"
+    "url": "https://github.com/LockyBee/dsh-douyin-agent/issues"
   },
   "keywords": [
     "dsh-plugin",
